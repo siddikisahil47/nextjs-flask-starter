@@ -37,13 +37,36 @@ npm install -g pnpm
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 ```
 
-2. **Clone the template**
+2. **Install Python & Set up Virtual Environment**
+
+```bash
+# Install Python (if not installed)
+# macOS
+brew install python3
+
+# Windows - Download from https://www.python.org/downloads/
+
+# Create virtual environment
+python3 -m venv .venv
+
+# Activate virtual environment
+# On macOS/Linux
+source .venv/bin/activate
+# On Windows
+.venv\Scripts\activate
+
+# Verify Python installation
+python --version
+pip --version
+```
+
+3. **Clone the template**
 
 ```bash
 npx create-next-app my-app --example https://github.com/siddikisahil47/nextjs-flask-starter
 ```
 
-3. **Install dependencies**
+4. **Install dependencies**
 
 ```bash
 # Install frontend dependencies
@@ -55,7 +78,7 @@ pnpm install
 pip install -r requirements.txt
 ```
 
-4. **Start development servers**
+5. **Start development servers**
 
 ```bash
 # Start both Next.js and Flask servers
@@ -64,7 +87,7 @@ npm run dev
 pnpm dev
 ```
 
-5. **Open browsers**
+6. **Open browsers**
 
 - Frontend: [http://localhost:3000](http://localhost:3000)
 - Backend API: [http://127.0.0.1:5328/api/python](http://127.0.0.1:5328/api/python)
